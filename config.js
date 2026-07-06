@@ -7,7 +7,7 @@ const CONFIG = {
 
   reponsesAcceptees: ["06/06", "6/6", "6juin", "06juin", "6/06", "06/6", "06/06/2026", "6/6/2026", "6juin2026", "6 juin", "6 juin 2026"],
   
-  messageAmour: "Flavie mon amour,\n\nTu viens de remonter toute notre histoire, et moi en la construisant j'ai réalisé un truc : ce mois avec toi, même depuis qu'on s'est rencontrés, c'est les plus beaux jours de ma vie. Sans hésiter.\n\nTu es entrée dans ma vie et tu es devenue une partie de mon âme. Alors ce soir, je te la donne : elle est à toi.\n\nMerci d'être toi. Vivement le mois prochain, et tous les autres après.\n\nCe cadeau que tu viens d'ouvrir, c'était ça en vrai : un bout de moi, rien que pour toi.\n\nJe t'aime plus que tout. ❤️",
+  messageAmour: "Flavie, mon amour,\n\nEn te voyant remonter le fil de notre histoire, une évidence m'a frappé : depuis notre rencontre, et tout particulièrement ce mois passé à tes côtés, je vis les plus beaux jours de ma vie. Sans la moindre hésitation.\n\nTu es entrée dans mon monde et tu es devenue une part entière de mon âme. Alors ce soir, je te la confie. Elle t'appartient.\n\nMerci d'être simplement qui tu es. Vivement le mois prochain, et tous ceux qui suivront.\n\nCe cadeau que tu tiens entre les mains, c'est exactement ça : un fragment de moi, gardé rien que pour toi.\n\nJe t'aime infiniment. ❤️",
   
   statistiques: [
     { emoji: "", nombre: 27,   texte: "fois où madame a gagné au Uno 😤" },
