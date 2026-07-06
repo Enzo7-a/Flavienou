@@ -7,7 +7,7 @@ const CONFIG = {
 
   reponsesAcceptees: ["06/06", "6/6", "6juin", "06juin", "6/06", "06/6", "06/06/2026", "6/6/2026", "6juin2026", "6 juin", "6 juin 2026"],
   
-  messageAmour: "Flavie, mon amour,\n\nEn te voyant remonter le fil de notre histoire, une évidence m'a frappé : depuis notre rencontre, et tout particulièrement ce mois passé à tes côtés, je vis les plus beaux jours de ma vie. Sans la moindre hésitation.\n\nTu es entrée dans mon monde et tu es devenue une part entière de mon âme. Alors ce soir, je te la confie. Elle t'appartient.\n\nMerci d'être simplement qui tu es. Vivement le mois prochain, et tous ceux qui suivront.\n\nCe cadeau que tu tiens entre les mains, c'est exactement ça : un fragment de moi, gardé rien que pour toi.\n\nJe t'aime infiniment. ❤️",
+  messageAmour: "Flavie, mon amour,\n\nEn me voyant remonter le fil de notre histoire, une évidence m'a frappé : depuis notre rencontre, et tout particulièrement ce mois passé à tes côtés, je vis les plus beaux jours de ma vie. Sans la moindre hésitation.\n\nTu es entrée dans mon monde et tu es devenue une part entière de mon quotidien. Alors ce soir, je te remercie tellement de me rendre heureux et je ferais tous pour que ce soit pareil pour toi. \n\nMerci d'être simplement qui tu es. Vivement qu'on passe le reste de notre vie ensemble à découvrir le monde et bien sûr découvrir la vie de famille ensemble 😝.\n\nTu es une partie de mon âme et je te la donne avec plaisir prends en soin !\n\nJe t'aime infiniment. ❤️",
   
   statistiques: [
     { emoji: "", nombre: 27,   texte: "fois où madame a gagné au Uno 😤" },
@@ -18,6 +18,17 @@ const CONFIG = {
     { emoji: "", nombre: "129​", texte: "c'est le nombres de jours qui ont été les plus beau de ma vie 😝" },
   ],
 };
+
+const DOSSIER = [
+  "photos/dossier1.JPG",
+  "photos/dossier7.PNG",
+  "photos/dossier8.PNG",
+  "photos/dossier2.JPG",
+  "photos/dossier4.png",
+  "photos/dossier5.png",
+  "photos/dossier3.JPG",
+  "photos/dossier6.png",
+];
 
 const FRISE = [
   {

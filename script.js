@@ -138,6 +138,80 @@ function tick() {
 tick();
 setInterval(tick, 1000);
 
+function construireCarrousel() {
+  const track = document.getElementById("carTrack");
+  const dots = document.getElementById("carDots");
+  if (!track || typeof DOSSIER === "undefined" || DOSSIER.length === 0) return;
+
+  DOSSIER.forEach((src, i) => {
+    const slide = document.createElement("div");
+    slide.className = "car-slide";
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Dossier " + (i + 1);
+    img.loading = "lazy";
+    img.onerror = () => {
+      const fallback = document.createElement("div");
+      fallback.className = "car-fallback";
+      fallback.textContent = "😋";
+      img.replaceWith(fallback);
+    };
+    img.addEventListener("click", () => ouvrirLightbox(src));
+    slide.appendChild(img);
+    track.appendChild(slide);
+
+    const dot = document.createElement("button");
+    dot.className = "car-dot";
+    dot.setAttribute("aria-label", "Aller à la photo " + (i + 1));
+    dot.addEventListener("click", () => aller(i));
+    dots.appendChild(dot);
+  });
+
+  let index = 0;
+  const total = DOSSIER.length;
+
+  function maj() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.querySelectorAll(".car-dot").forEach((d, i) =>
+      d.classList.toggle("active", i === index)
+    );
+  }
+  function aller(i) { index = (i + total) % total; maj(); }
+
+  document.getElementById("carPrev").addEventListener("click", () => aller(index - 1));
+  document.getElementById("carNext").addEventListener("click", () => aller(index + 1));
+
+  // Swipe tactile (pour le téléphone)
+  let departX = null;
+  track.addEventListener("touchstart", e => { departX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener("touchend", e => {
+    if (departX === null) return;
+    const delta = e.changedTouches[0].clientX - departX;
+    if (Math.abs(delta) > 40) aller(delta < 0 ? index + 1 : index - 1);
+    departX = null;
+  }, { passive: true });
+
+  maj();
+}
+construireCarrousel();
+
+// --- Lightbox : voir une photo en entier ---
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+
+function ouvrirLightbox(src) {
+  lightboxImg.src = src;
+  lightboxImg.alt = "Photo en grand";
+  lightbox.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+function fermerLightbox() {
+  lightbox.classList.remove("show");
+  document.body.style.overflow = "";
+}
+lightbox.addEventListener("click", fermerLightbox);
+document.addEventListener("keydown", e => { if (e.key === "Escape") fermerLightbox(); });
+
 const gift = document.getElementById("gift");
 const giftHint = document.getElementById("giftHint");
 const loveMessage = document.getElementById("loveMessage");

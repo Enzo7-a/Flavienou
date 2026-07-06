@@ -54,6 +54,19 @@
     </div>
   </section>
 
+  <section class="dossier-section">
+    <h2 class="section-title">Dossier sur toi 😋</h2>
+    <p class="car-hint">Touche une photo pour la voir en grand ✨</p>
+    <div class="carousel" id="carousel">
+      <button class="car-btn car-prev" id="carPrev" aria-label="Photo précédente">‹</button>
+      <div class="car-viewport">
+        <div class="car-track" id="carTrack"></div>
+      </div>
+      <button class="car-btn car-next" id="carNext" aria-label="Photo suivante">›</button>
+    </div>
+    <div class="car-dots" id="carDots"></div>
+  </section>
+
   <section class="gift-section">
     <h2 class="section-title">Un dernier truc pour toi… 🎀</h2>
     <div id="gift">🎁</div>
@@ -65,6 +78,11 @@
   </section>
 
   <footer>Fait avec tout mon amour pour toi Flavie. De ton amoureux Enzo Pagèsssss </footer>
+</div>
+
+<div id="lightbox" role="dialog" aria-modal="true">
+  <button id="lightboxClose" aria-label="Fermer la photo">✕</button>
+  <img id="lightboxImg" src="" alt="">
 </div>
 
 <script src="config.js"></script>

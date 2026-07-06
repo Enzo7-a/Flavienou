@@ -126,14 +126,16 @@ header.hero .sub{
 .tl-item:nth-child(odd){left:0;text-align:right;}
 .tl-item:nth-child(even){left:50%;text-align:left;}
 .tl-item::after{
-  content:"";position:absolute;top:42px;
-  width:14px;height:14px;border-radius:50%;
+  content:"▼";position:absolute;top:42px;
+  width:18px;height:18px;border-radius:50%;
   background:var(--rose);
   border:3px solid #fff;
   box-shadow:0 0 0 3px rgba(255,77,148,.25);
+  color:#fff;font-size:9px;line-height:18px;
+  text-align:center;font-family:sans-serif;
 }
-.tl-item:nth-child(odd)::after{right:-10px;}
-.tl-item:nth-child(even)::after{left:-10px;}
+.tl-item:nth-child(odd)::after{right:-12px;}
+.tl-item:nth-child(even)::after{left:-12px;}
 .tl-card{
   display:inline-block;background:var(--creme);
   border:1px solid rgba(255,119,174,.35);border-radius:20px;
@@ -218,6 +220,55 @@ header.hero .sub{
 }
 .cbox .unit{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;opacity:.9;}
 
+.dossier-section{max-width:720px;margin:0 auto;padding:30px 16px 60px;text-align:center;}
+.carousel{
+  display:flex;align-items:center;gap:12px;
+}
+.car-viewport{
+  flex:1;overflow:hidden;border-radius:24px;
+  background:var(--creme);
+  border:1px solid rgba(255,119,174,.35);
+  box-shadow:0 14px 34px var(--ombre-forte);
+}
+.car-track{
+  display:flex;
+  transition:transform .45s cubic-bezier(.25,.8,.35,1);
+}
+.car-slide{
+  flex:0 0 100%;padding:12px;
+}
+.car-slide img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;
+  border-radius:16px;background:var(--rose-pale);display:block;
+}
+.car-fallback{
+  width:100%;aspect-ratio:4/3;border-radius:16px;
+  border:2px dashed var(--rose-vif);background:var(--rose-pale);
+  display:flex;align-items:center;justify-content:center;font-size:52px;
+}
+.car-btn{
+  flex:0 0 auto;width:46px;height:46px;border-radius:50%;
+  border:none;cursor:pointer;
+  background:linear-gradient(160deg, var(--rose) 0%, var(--rose-vif) 100%);
+  color:#fff;font-size:26px;line-height:1;font-family:'Baloo 2',cursive;
+  box-shadow:0 6px 14px rgba(255,77,148,.35);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.car-btn:hover{transform:scale(1.08);box-shadow:0 10px 20px rgba(255,77,148,.45);}
+.car-btn:active{transform:scale(.95);}
+.car-dots{
+  display:flex;justify-content:center;gap:8px;margin-top:16px;
+}
+.car-dot{
+  width:11px;height:11px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(255,77,148,.3);
+  transition:background .2s ease, transform .2s ease;
+}
+.car-dot.active{background:var(--rose);transform:scale(1.25);}
+@media (max-width:700px){
+  .car-btn{width:38px;height:38px;font-size:22px;}
+}
+
 .gift-section{text-align:center;padding:30px 16px 120px;}
 #gift{
   font-size:110px;display:inline-block;cursor:pointer;user-select:none;
@@ -267,9 +318,46 @@ footer{
   .timeline-wrap::before{left:24px;}
   .tl-item, .tl-item:nth-child(even){width:100%;left:0;text-align:left;padding:16px 8px 16px 58px;}
   .tl-item:nth-child(odd){text-align:left;}
-  .tl-item:nth-child(odd)::after, .tl-item:nth-child(even)::after{left:14px;right:auto;}
+  .tl-item:nth-child(odd)::after, .tl-item:nth-child(even)::after{left:16px;right:auto;}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none !important;transition:none !important;}
   .tl-card{opacity:1;translate:0 0;}
+}
+
+/* ===== Lightbox : voir la photo en entier ===== */
+.car-hint{
+  font-weight:600;font-size:15px;color:var(--berry-doux);
+  margin:-18px 0 22px;
+}
+.car-slide img{cursor:zoom-in;touch-action:manipulation;}
+#gift{touch-action:manipulation;}
+.car-btn{touch-action:manipulation;}
+
+#lightbox{
+  position:fixed;inset:0;z-index:1000;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(48,8,27,.94);
+  padding:16px;
+  opacity:0;pointer-events:none;
+  transition:opacity .25s ease;
+}
+#lightbox.show{opacity:1;pointer-events:auto;}
+#lightboxImg{
+  max-width:100%;
+  max-height:90vh;
+  max-height:90dvh;
+  border-radius:14px;
+  box-shadow:0 18px 50px rgba(0,0,0,.55);
+  transform:scale(.94);
+  transition:transform .25s ease;
+}
+#lightbox.show #lightboxImg{transform:scale(1);}
+#lightboxClose{
+  position:absolute;top:14px;right:14px;
+  width:44px;height:44px;border-radius:50%;
+  border:none;cursor:pointer;
+  background:rgba(255,255,255,.16);
+  color:#fff;font-size:20px;line-height:44px;text-align:center;
+  font-family:'Quicksand',sans-serif;font-weight:700;
 }
