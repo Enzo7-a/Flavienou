@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accès privé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="confettiCanvas"></canvas>
+
+<div id="gate">
+  <div class="gate-card" id="gateCard">
+    <img class="gate-img" src="photos/IMG_1503.png" alt="">
+    <h1>Page protégée</h1>
+    <p>Pour continuer, entre la date où on s'est mis ensemble&nbsp;:</p>
+    <input id="gateInput" type="text" placeholder="ex : 21 juillet 2007" autocomplete="off">
+    <button id="gateBtn">Valider</button>
+    <div id="gateError"></div>
+  </div>
+</div>
+
+<div id="site">
+  <header class="hero">
+    <h1>Notre premier mois</h1>
+    <p class="sub">Flavie j'ai fait ça pour toi, pour te montrer tous mon amour à ma manière... Je sais qu'on est éloigné mais je veux te montrer mon amour de toutes les manières possibles car pour moi tu es mon âme soeur <3</p>
+    <div class="hero-line"></div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Notre histoire</h2>
+    <div class="timeline-wrap" id="timeline"></div>
+  </section>
+
+  <section class="stats">
+    <h2 class="section-title">Nous en chiffres</h2>
+    <div class="stat-grid" id="statGrid"></div>
+
+    <div class="counter-card">
+      <h3>On se parle depuis…</h3>
+      <div class="counter" id="counterTalk"></div>
+    </div>
+
+    <div class="counter-card">
+      <h3>…et je suis le plus heureux du monde depuis</h3>
+      <div class="counter" id="counterHappy"></div>
+    </div>
+
+    <div class="counter-card">
+      <h3>Ensemble depuis…</h3>
+      <div class="counter" id="counterLove"></div>
+    </div>
+  </section>
+
+  <section class="gift-section">
+    <h2 class="section-title">Un dernier truc pour toi… 🎀</h2>
+    <div id="gift">🎁</div>
+    <p id="giftHint">Clique dessus pour l'ouvrir !</p>
+    <div id="loveMessage">
+      <h3>💌 Pour toi</h3>
+      <p id="loveText"></p>
+    </div>
+  </section>
+
+  <footer>Fait avec tout mon amour pour toi Flavie. De ton amoureux Enzo Pagèsssss </footer>
+</div>
+
+<script src="config.js"></script>
+<script src="confetti.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
