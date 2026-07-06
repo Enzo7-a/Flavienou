@@ -7,7 +7,7 @@ const CONFIG = {
 
   reponsesAcceptees: ["06/06", "6/6", "6juin", "06juin", "6/06", "06/6", "06/06/2026", "6/6/2026", "6juin2026", "6 juin", "6 juin 2026"],
   
-  messageAmour: "Flavie, mon amour,\n\nEn me voyant remonter le fil de notre histoire, une évidence m'a frappé : depuis notre rencontre, et tout particulièrement ce mois passé à tes côtés, je vis les plus beaux jours de ma vie. Sans la moindre hésitation.\n\nTu es entrée dans mon monde et tu es devenue une part entière de mon quotidien. Alors ce soir, je te remercie tellement de me rendre heureux et je ferais tous pour que ce soit pareil pour toi. \n\nMerci d'être simplement qui tu es. Vivement qu'on passe le reste de notre vie ensemble à découvrir le monde et bien sûr découvrir la vie de famille ensemble 😝.\n\nTu es une partie de mon âme et je te la donne avec plaisir prends en soin !\n\nJe t'aime infiniment. ❤️",
+  messageAmour: "Flavie, mon amour,\n\nEn remontant le fil de notre histoire, une évidence m'a frappé : depuis notre rencontre, et surtout depuis ce mois passé à tes côtés, je vis les plus beaux jours de ma vie. Et ça, je peux te le dire sans la moindre hésitation.\n\nTu es entrée dans mon monde et tu fais désormais partie intégrante de mon quotidien. Alors ce soir, merci de me rendre aussi heureux, et je ferai tout pour que ce soit pareil pour toi.\n\nMerci d'être simplement qui tu es. Vivement qu'on passe le reste de notre vie ensemble, à découvrir le monde et, bien sûr, la vie de famille 😝.\n\nTu es une partie de mon âme et je te la donne avec plaisir : prends-en soin !\n\nJe t'aime infiniment. ❤️",
   
   statistiques: [
     { emoji: "", nombre: 27,   texte: "fois où madame a gagné au Uno 😤" },

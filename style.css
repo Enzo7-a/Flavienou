@@ -325,7 +325,6 @@ footer{
   .tl-card{opacity:1;translate:0 0;}
 }
 
-/* ===== Lightbox : voir la photo en entier ===== */
 .car-hint{
   font-weight:600;font-size:15px;color:var(--berry-doux);
   margin:-18px 0 22px;

@@ -14,6 +14,7 @@ function verifierDate() {
   const ok = CONFIG.reponsesAcceptees.some(r => normaliser(r) === saisie);
   if (ok) {
     document.title = "Notre premier mois";
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     gate.classList.add("open");
     site.classList.add("visible");
     Confettis.explosion(140, 0.5, 0.4);
@@ -195,7 +196,6 @@ function construireCarrousel() {
 }
 construireCarrousel();
 
-// --- Lightbox : voir une photo en entier ---
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 
